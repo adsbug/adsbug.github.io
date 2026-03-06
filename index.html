@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adsbug | Affordable Graphic Design Services</title>
+<meta name="description" content="Adsbug provides affordable logo design, poster design, banner design and visiting card design services. Order via WhatsApp.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Adsbug Logo">
+        <span>ADSBUG</span>
+    </div>
+    <div class="social-icons">
+        <a href="mailto:yourgmail@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://instagram.com/yourusername" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://facebook.com/yourpage" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    </div>
+</nav>
+
+<header>
+<img src="logo.png" alt="Logo">
+<h1>Adsbug</h1>
+<p class="tagline">
+Creative Designs That Make Your Brand Stand Out.<br>
+Fast, Affordable & Professional Graphic Design Services.
+</p>
+</header>
+
+<section class="services">
+<div class="card">
+<h3>Logo Design</h3>
+<p class="price">₹20</p>
+<button onclick="order('Logo Design ₹20')">Order Now</button>
+</div>
+<div class="card">
+<h3>Social Media Poster</h3>
+<p class="price">₹70</p>
+<button onclick="order('Social Media Poster ₹70')">Order Now</button>
+</div>
+<div class="card">
+<h3>Banner Design</h3>
+<p class="price">₹150</p>
+<button onclick="order('Banner Design ₹150')">Order Now</button>
+</div>
+<div class="card">
+<h3>Visiting Card Design</h3>
+<p class="price">₹30</p>
+<button onclick="order('Visiting Card Design ₹30')">Order Now</button>
+</div>
+</section>
+
+<section id="custom" class="custom">
+<h2>Custom Design Order</h2>
+<p>Describe your idea below. Your message will be sent directly to us via WhatsApp.</p>
+<form id="customForm">
+<input type="text" id="customerName" placeholder="Your Name" required>
+<textarea id="customerDesc" placeholder="Describe your design" required></textarea>
+<button type="button" onclick="customOrder()">Send Order</button>
+</form>
+</section>
+
+<footer>
+<p>© Adsbug | @Sandip</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
