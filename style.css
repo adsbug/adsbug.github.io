@@ -27,13 +27,14 @@ nav.navbar{
     z-index:1000;
 }
 
-nav .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:600;}
-nav .logo img,
-header img{
-    width:70px;         
-    height:70px;         
-    border-radius:50%;   
-    object-fit:cover;    
+/* Navbar + Header logo */
+nav .logo img, header img {
+    width: 70px;       
+    height: 70px;
+    border-radius: 50%; 
+    object-fit: cover;  
+    display: block;     
+}
 }
 .social-icons{display:flex;gap:15px;}
 .social-icons a{text-decoration:none;font-size:20px;color:#333;transition:0.3s;}
