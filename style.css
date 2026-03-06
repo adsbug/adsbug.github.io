@@ -1,11 +1,12 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
 
+/* Body + background animation */
 body{
     min-height:100vh;
     background:linear-gradient(135deg,#ffffff,#ffd54f);
     background-size:400% 400%;
     animation:gradientMove 12s ease infinite;
-    padding-top:80px;
+    padding-top:80px; /* navbar height */
 }
 
 @keyframes gradientMove{
@@ -14,6 +15,7 @@ body{
 100%{background-position:0% 50%;}
 }
 
+/* NAVBAR */
 nav.navbar{
     position:fixed;
     top:0; left:0; width:100%;
@@ -26,16 +28,23 @@ nav.navbar{
 }
 
 nav .logo{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:600;}
-nav .logo img{width:35px;}
+nav .logo img,
+header img{
+    width:70px;         
+    height:70px;         
+    border-radius:50%;   
+    object-fit:cover;    
+}
 .social-icons{display:flex;gap:15px;}
 .social-icons a{text-decoration:none;font-size:20px;color:#333;transition:0.3s;}
 .social-icons a:hover{color:#ff9900;transform:scale(1.2);}
 
+/* HEADER */
 header{text-align:center;padding:40px 20px;}
-header img{width:70px;margin-bottom:10px;}
 header h1{font-size:38px;color:#333;}
 .tagline{color:#555;margin-top:10px;font-size:16px;}
 
+/* SERVICES */
 .services{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -66,6 +75,7 @@ button{
 }
 button:hover{background:#1ebe5d;}
 
+/* CUSTOM ORDER */
 .custom{text-align:center;padding:40px;}
 form{
     max-width:500px;
@@ -83,4 +93,5 @@ form input, form textarea{
     border:1px solid #ddd;
 }
 
+/* FOOTER */
 footer{text-align:center;padding:20px;color:#333;}
