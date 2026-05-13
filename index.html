@@ -25,25 +25,30 @@ border-bottom:1px solid rgba(255,255,255,.08)
 }
 .navbar{height:76px;display:flex;align-items:center;justify-content:space-between}
 
-.logo-mark{
-width:54px;
-height:54px;
-border-radius:50%;
-background:#fff;
-display:grid;
-place-items:center;
-overflow:hidden;
-box-shadow:0 0 25px rgba(17,199,232,.4);
-border:2px solid rgba(255,255,255,.35);
+  @media(max-width:720px){
+
+.logo{
+gap:10px;
 }
 
-.logo-mark img{
-width:100%;
-height:100%;
-object-fit:cover;
-border-radius:50%;
-display:block;
+.logo-mark{
+width:50px;
+height:50px;
+min-width:50px;
 }
+
+.logo-text{
+font-size:24px;
+}
+
+.menu-toggle{display:block}
+
+nav{
+position:absolute;
+top:76px;
+left:0;
+width:100%;
+...
 
 nav{display:flex;gap:25px;align-items:center}
 nav a{font-size:15px;color:#e7e9ff}
