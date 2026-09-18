@@ -9,7 +9,7 @@ const ICON_FG = {c1:"#C88CFF", c2:"#4FA8FF", c3:"#FFB020", c4:"#B4B4B4", c5:"#4A
 const STATUS_LABEL = {PaymentPending:"Payment Pending Verification", Confirmed:"Confirmed", InProgress:"In Progress", Delivered:"Delivered", Cancelled:"Cancelled"};
 const STATUS_CLASS = {PaymentPending:"st-paymentpending", Confirmed:"st-confirmed", InProgress:"st-inprogress", Delivered:"st-delivered", Cancelled:"st-cancelled"};
 const SUPPORT_EMAIL = "adsbugshop@gmail.com";
-const SUPPORT_PHONE = "+91 9XXXXXXXXX";
+const SUPPORT_PHONE = "+91 8609392902";
 const LOGO_URL = "https://adsbug.github.io/logo.png";
 
 /* payment settings */
