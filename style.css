@@ -100,6 +100,16 @@
   .order-items{font-size:13px; color:var(--muted); margin-bottom:8px;}
   .order-detail{font-size:12.5px; color:var(--muted); margin-bottom:8px; background:var(--surface-2); border-radius:8px; padding:8px 10px;}
   .order-foot{display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--line); padding-top:10px;}
+  .status-stepper{display:flex; align-items:flex-start; padding:16px 2px 14px; margin-bottom:2px;}
+  .status-stepper .step{flex:1; display:flex; flex-direction:column; align-items:center; position:relative;}
+  .status-stepper .step:not(:last-child)::after{content:''; position:absolute; top:11px; left:50%; width:100%; height:3px; background:var(--line); z-index:0;}
+  .status-stepper .step.done:not(:last-child)::after{background:var(--volt);}
+  .status-stepper .step-dot{width:24px; height:24px; border-radius:50%; background:var(--surface-2); border:2px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; color:var(--muted); z-index:1; flex-shrink:0;}
+  .status-stepper .step.done .step-dot{background:var(--volt); border-color:var(--volt); color:var(--volt-text);}
+  .status-stepper .step.active .step-dot{background:var(--surface); border-color:var(--volt-ink); color:var(--volt-ink);}
+  .status-stepper .step-label{font-size:9.5px; color:var(--muted); margin-top:6px; text-align:center; max-width:68px; line-height:1.25;}
+  .status-stepper .step.done .step-label, .status-stepper .step.active .step-label{color:var(--text); font-weight:600;}
+  .stepper-cancelled{background:#FEE2E2; color:#B91C1C; padding:10px 12px; border-radius:8px; font-size:12.5px; font-weight:600; text-align:center; margin:12px 0;}
   .deliverable-btn{display:inline-block; margin-top:10px; background:var(--surface-2); border:1px solid var(--line); color:var(--text); border-radius:8px; padding:8px 12px; font-size:12.5px; font-weight:600; cursor:pointer; text-decoration:none;}
 
   .account-box{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:16px; margin-bottom:18px;}

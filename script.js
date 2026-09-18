@@ -9,7 +9,7 @@ const ICON_FG = {c1:"#C88CFF", c2:"#4FA8FF", c3:"#FFB020", c4:"#B4B4B4", c5:"#4A
 const STATUS_LABEL = {PaymentPending:"Payment Pending Verification", Confirmed:"Payment Confirmed", InProgress:"In Progress", Delivered:"Delivered", Cancelled:"Cancelled"};
 const STATUS_CLASS = {PaymentPending:"st-paymentpending", Confirmed:"st-confirmed", InProgress:"st-inprogress", Delivered:"st-delivered", Cancelled:"st-cancelled"};
 const SUPPORT_EMAIL = "adsbugshop@gmail.com";
-const SUPPORT_PHONE = "+918609392902";
+const SUPPORT_PHONE = "+91 8609392902";
 const LOGO_URL = "https://adsbug.github.io/logo.png";
 
 /* payment settings */
@@ -463,6 +463,23 @@ function viewDashboard(){
     ${state.orders.length===0 ? `<div class="empty">${boxSvg}<div>No orders yet</div></div>` : state.orders.map(orderCard).join("")}
   </div>`;
 }
+function statusStepper(status){
+  const steps = [
+    {key:"PaymentPending", label:"Payment"},
+    {key:"Confirmed", label:"Confirmed"},
+    {key:"InProgress", label:"In Progress"},
+    {key:"Delivered", label:"Delivered"}
+  ];
+  if(status === "Cancelled"){
+    return '<div class="stepper-cancelled">This order has been cancelled</div>';
+  }
+  const idx = steps.findIndex(s=>s.key===status);
+  return '<div class="status-stepper">' + steps.map((s,i)=>{
+    const cls = i < idx ? 'done' : (i===idx ? 'active' : '');
+    const dot = i < idx ? '&#10003;' : (i+1);
+    return '<div class="step '+cls+'"><div class="step-dot">'+dot+'</div><div class="step-label">'+s.label+'</div></div>';
+  }).join('') + '</div>';
+}
 function orderCard(o){
   const d = new Date(o.created_at);
   const itemsText = o.items.map(i=>i.name+" x"+i.qty).join(", ");
@@ -473,6 +490,7 @@ function orderCard(o){
       <div class="status-pill ${STATUS_CLASS[o.status]}">${STATUS_LABEL[o.status]}</div>
     </div>
     <div class="order-items">${itemsText}</div>
+    ${statusStepper(o.status)}
     ${o.details ? `<div class="order-detail">${o.details}</div>` : ""}
     <div class="order-foot"><span style="color:var(--muted); font-size:13px;">Total</span><span style="font-weight:700;">${fmt(o.total)}</span></div>
     ${o.deliverable_url ? `<a class="deliverable-btn" href="${o.deliverable_url}" target="_blank" rel="noopener">Download Your File${o.deliverable_name ? " ("+o.deliverable_name+")" : ""}</a>` : ""}
