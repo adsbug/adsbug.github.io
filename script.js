@@ -6,10 +6,10 @@ const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const CATEGORIES = ["All","Design & Branding","Web Development"];
 const ICON_COLORS = {c1:"#3A1A4A", c2:"#1A3A4A", c3:"#4A3A1A", c4:"#2A2A2A", c5:"#1A4A38"};
 const ICON_FG = {c1:"#C88CFF", c2:"#4FA8FF", c3:"#FFB020", c4:"#B4B4B4", c5:"#4ADE80"};
-const STATUS_LABEL = {PaymentPending:"Payment Pending Verification", Confirmed:"Confirmed", InProgress:"In Progress", Delivered:"Delivered", Cancelled:"Cancelled"};
+const STATUS_LABEL = {PaymentPending:"Payment Pending Verification", Confirmed:"Payment Confirmed", InProgress:"In Progress", Delivered:"Delivered", Cancelled:"Cancelled"};
 const STATUS_CLASS = {PaymentPending:"st-paymentpending", Confirmed:"st-confirmed", InProgress:"st-inprogress", Delivered:"st-delivered", Cancelled:"st-cancelled"};
 const SUPPORT_EMAIL = "adsbugshop@gmail.com";
-const SUPPORT_PHONE = "+91 8609392902";
+const SUPPORT_PHONE = "+918609392902";
 const LOGO_URL = "https://adsbug.github.io/logo.png";
 
 /* payment settings */
